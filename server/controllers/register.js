@@ -1,5 +1,7 @@
 const User = require("../models/User");
 
+const key = process.env.key;
+
 exports.register = (req, res) => {
     const user = new User(req.body);
     user.save((err, user) => {
