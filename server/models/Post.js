@@ -16,6 +16,10 @@ const PostSchema = new mongoose.Schema({
     visited: {
         type: Number,
         default: 0
+    },
+    to: {
+        type: String,
+        require: true
     }
 
 }, {
