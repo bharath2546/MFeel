@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import "./login.css";
+import "./signup.css";
 import { Link } from "react-router-dom";
 
-const Login = () => {
+const Signup = () => {
   const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handle = (e) => {
@@ -27,7 +28,7 @@ const Login = () => {
             </div>
             <div className="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
               <h3>
-                <b> SignIn Here</b>
+                <b> SignUp Here</b>
               </h3>
               <br />
               <form>
@@ -44,6 +45,17 @@ const Login = () => {
 
                 <div className="form-outline mb-4">
                   <input
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    type="email"
+                    className="form-control form-control-lg"
+                    placeholder="example@gmail.com"
+                  />
+                  <label className="form-label">Password</label>
+                </div>
+
+                <div className="form-outline mb-4">
+                  <input
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     type="password"
@@ -54,23 +66,19 @@ const Login = () => {
                   <label className="form-label">Password</label>
                 </div>
 
-                <div className="d-flex justify-content-around align-items-center mb-4">
-                  <div className="form-check"></div>
-                </div>
-
                 <button
                   type="submit"
                   className="btn btn-primary btn-lg btn-block"
                   onClick={handle}
                 >
-                  SignIn
+                  SignUp
                 </button>
                 <Link
-                  to="/signup"
+                  to="/"
                   className="btn btn-primary btn-lg btn-block"
                   style={{ marginLeft: "100px" }}
                 >
-                  SignUp
+                  SignIn
                 </Link>
               </form>
             </div>
@@ -81,4 +89,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Signup;
