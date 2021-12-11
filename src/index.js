@@ -1,12 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import Login from "./pages/login/Login";
 
 ReactDOM.render(
   <React.StrictMode>
-    <h1>hello this is a Mfeel Website</h1>
+    <Login />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
-
-
